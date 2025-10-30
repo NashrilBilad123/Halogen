@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Blog Halogen – Golongan VIIA (Kelompok 3)</title>
+  <meta name="description" content="Blog edukatif Halogen (Golongan VIIA): sifat periodik, kereaktifan, sumber alam, ekstraksi, pemanfaatan, dampak lingkungan, interhalogen, oksianion, uji halida, dan kuis." />
+  <meta name="keywords" content="halogen, kimia, fluor, klorin, bromin, iodin, astatin, tennessine, SMA, kelompok 3" />
+  <meta name="author" content="Kelompok 3: Coky Ilham Firmansyah (05), Malika Java Suryono (08), Muhammad Nashril Bilas (14), Nuning Aristianti (20), Putri Yudistira (22)" />
+  <meta property="og:title" content="Blog Halogen – Golongan VIIA" />
+  <meta property="og:description" content="Sifat periodik, kereaktifan, sumber alam, pemanfaatan, dampak lingkungan, interhalogen, oksianion, uji halida, + kuis." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth}
+    body{margin:0;line-height:1.65;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,'Noto Sans','Helvetica Neue',sans-serif;
+      color:#0f172a;background:#ffffff;background-image:linear-gradient(to bottom,#ffffff 0%,#f8fafc 60%,#f1f5f9 100%);transition:background .3s ease,color .3s ease}
+    :root{--container:1100px;--pad:clamp(16px,4vw,28px);--r:16px;--muted:#475569;--muted-dark:#cbd5e1;--shadow:0 8px 24px rgba(2,6,23,.08)}
+    .dark body,body.dark{background:#0b1220;background-image:linear-gradient(180deg,#0b1220 0%,#10223a 60%,#1e293b 100%);color:#f1f5f9}
+    img,svg,video{max-width:100%;height:auto;display:block}
+    .safe{padding-left:max(var(--pad),env(safe-area-inset-left));padding-right:max(var(--pad),env(safe-area-inset-right))}
+    header{padding:calc(22px + env(safe-area-inset-top)) var(--pad) 18px;text-align:center}
+    h1{font-size:clamp(2rem,3.4vw + .5rem,3.2rem);font-weight:800;letter-spacing:-.02em;margin:0}
+    .lead{color:var(--muted);margin:10px auto 0;max-width:62ch;font-size:clamp(1rem,.4vw + .95rem,1.2rem)}
+    .dark .lead,body.dark .lead{color:var(--muted-dark)}
+    .group{display:inline-flex;flex-direction:column;gap:10px;margin-top:16px;padding:14px 18px;border-radius:var(--r);background:#ffffffee;border:1px solid #e5e7eb;box-shadow:var(--shadow)}
+    .dark .group,body.dark .group{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);box-shadow:none}
+    .btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .btn{border:0;border-radius:14px;padding:12px 16px;font-weight:600;cursor:pointer;min-height:44px;transition:transform .1s ease,box-shadow .2s ease,background .2s ease}
+    .btn-primary{background:#0f172a;color:#fff;box-shadow:0 6px 16px rgba(2,6,23,.18)}
+    .btn-ghost{background:#e2e8f0;color:#0f172a}
+    .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+    .cards-2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .cards-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .cards-4{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+    .card{border-radius:var(--r);padding:14px;background:#ffffffff;border:1px solid #e5e7eb;box-shadow:var(--shadow)}
+    section{padding:22px 0}
+    h2{font-size:clamp(1.1rem,.6vw + 1rem,1.6rem);margin:0 0 8px}
+    .muted{color:#64748b}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;background:#f1f5f9;padding:6px 8px;border-radius:8px;display:inline-block}
+    footer{text-align:center;padding:28px max(var(--pad),env(safe-area-inset-right)) calc(28px + env(safe-area-inset-bottom)) max(var(--pad),env(safe-area-inset-left));font-size:.9rem;color:#64748b}
+  </style>
+  <script>
+    (function(){
+      var saved = localStorage.getItem('halogen-theme');
+      if(saved==='dark'){ document.documentElement.classList.add('dark'); document.body.classList.add('dark'); }
+      function setLabel(){ var l=document.getElementById('themeLabel'); if(l) l.textContent = (document.documentElement.classList.contains('dark')||document.body.classList.contains('dark')) ? 'Mode Terang' : 'Mode Gelap'; }
+      window.toggleTheme=function(){ var root=document.documentElement, body=document.body; var isDark=root.classList.contains('dark')||body.classList.contains('dark'); if(isDark){root.classList.remove('dark');body.classList.remove('dark');localStorage.setItem('halogen-theme','light')} else {root.classList.add('dark');body.classList.add('dark');localStorage.setItem('halogen-theme','dark')}; setLabel(); };
+      window.addEventListener('DOMContentLoaded', setLabel);
+    })();
+    function nilaiKuis(){ var benar=0,total=3; if(document.querySelector('input[name=q1]:checked')?.value==='C') benar++; if(document.querySelector('input[name=q2]:checked')?.value==='B') benar++; if(document.querySelector('input[name=q3]:checked')?.value==='A') benar++; var out=document.getElementById('hasil-kuis'); var pct=Math.round((benar/total)*100); out.textContent='Skor: '+benar+'/'+total+' ('+pct+'%)'; }
+  </script>
+</head>
+<body>
+  <header class="safe">
+    <h1>Halogen (Golongan VIIA)</h1>
+    <p class="lead">Mengenal sifat, kereaktifan, sumber alam, pemanfaatan, dan dampak lingkungan dari unsur F, Cl, Br, I, At, dan Ts.</p>
+    <div class="group" role="group" aria-label="Kelompok 3">
+      <div class="muted" style="text-transform:uppercase;letter-spacing:.12em;font-size:.78rem">Kelompok 3</div>
+      <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.35rem 1.2rem;font-size:.95rem">
+        <li><strong>05.</strong> Coky Ilham Firmansyah</li>
+        <li><strong>08.</strong> Malika Java Suryono</li>
+        <li><strong>14.</strong> Muhammad Nashril Bilas</li>
+        <li><strong>20.</strong> Nuning Aristianti</li>
+        <li><strong>22.</strong> Putri Yudistira</li>
+      </ul>
+      <div class="btns">
+        <button class="btn btn-primary" onclick="window.print()">Cetak / PDF</button>
+        <button class="btn btn-ghost" onclick="toggleTheme()"><span id="themeLabel">Mode Gelap</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="safe" style="max-width:var(--container);margin:0 auto;padding-bottom:56px">
+    <!-- Cards Unsur -->
+    <section class="grid cards-3" id="cards" aria-label="Ringkasan Unsur Halogen"></section>
+
+    <!-- 1) Keteraturan Sifat + Grafik -->
+    <section id="sifat" aria-labelledby="sifat-title">
+      <h2 id="sifat-title">1) Keteraturan Sifat Unsur</h2>
+      <p class="muted">Ke bawah golongan: jari-jari <b>naik</b>; energi ionisasi & keelektronegatifan <b>turun</b>; afinitas e⁻ tinggi (Cl ≳ F). Nilai At pendekatan.</p>
+      <div class="grid cards-2">
+        <div class="card"><div class="muted" style="font-weight:600;margin-bottom:6px">Jari-jari kovalen (pm)</div>F 64 • Cl 99 • Br 114 • I 133 • At ~150</div>
+        <div class="card"><div class="muted" style="font-weight:600;margin-bottom:6px">Energi ionisasi (kJ/mol)</div>F 1681 • Cl 1251 • Br 1140 • I 1008 • At ~920</div>
+        <div class="card"><div class="muted" style="font-weight:600;margin-bottom:6px">Afinitas elektron (kJ/mol)</div>F 328 • <b>Cl 349</b> • Br 324 • I 295 • At ~270</div>
+        <div class="card"><div class="muted" style="font-weight:600;margin-bottom:6px">Keelektronegatifan (Pauling)</div>F 3,98 • Cl 3,16 • Br 2,96 • I 2,66 • At ~2,2</div>
+      </div>
+      <figure class='card' style='margin-top:14px'><img src='grafik-halogen.png' alt='Perbandingan sifat halogen (F→At)'><figcaption class='muted' style='font-size:.9rem;margin-top:6px'>Gambar: Perbandingan jari-jari atom, energi ionisasi, dan keelektronegatifan (F → At).</figcaption></figure>
+    </section>
+
+    <!-- 2) Kereaktifan -->
+    <section id="kereaktifan" aria-labelledby="ker-title">
+      <h2 id="ker-title">2) Kereaktifan</h2>
+      <div class="grid cards-2">
+        <div class="card"><div style="font-weight:600;margin-bottom:6px">Pembentukan halida logam</div><code class="mono">2 Na (s) + Cl₂ (g) → 2 NaCl (s)</code><div class="muted" style="margin-top:6px">Redoks eksoterm; sangat spontan (F, Cl).</div></div>
+        <div class="card"><div style="font-weight:600;margin-bottom:6px">Displacement halida</div><code class="mono">Cl₂ (aq) + 2 KI (aq) → 2 KCl (aq) + I₂ (aq/s)</code><div class="muted" style="margin-top:6px">Halogen lebih reaktif mengoksidasi halida kurang reaktif.</div></div>
+        <div class="card"><div style="font-weight:600;margin-bottom:6px">Hidrogen halida</div><code class="mono">H₂ (g) + F₂ (g) → 2 HF (g)</code><div class="muted" style="margin-top:6px">HF mengetsa kaca (SiO₂); sangat korosif.</div></div>
+        <div class="card"><div style="font-weight:600;margin-bottom:6px">Disinfeksi air</div><code class="mono">Cl₂ + H₂O ⇌ HCl + HOCl</code><div class="muted" style="margin-top:6px">HOCl oksidator pembunuh mikroba.</div></div>
+      </div>
+    </section>
+
+    <!-- 3) Keberadaan & Ekstraksi -->
+    <section id="keberadaan" aria-labelledby="keb-title">
+      <h2 id="keb-title">3) Keberadaan di Alam & Ekstraksi</h2>
+      <ul class="muted" style="margin-top:6px">
+        <li>Fluor: fluorite (CaF₂), cryolite (Na₃AlF₆) → HF dari CaF₂ + H₂SO₄.</li>
+        <li>Klor: halite (NaCl) & air garam → elektrolisis brine menghasilkan Cl₂.</li>
+        <li>Brom: dari air laut/brine kaya Br⁻; oksidasi Br⁻ dengan Cl₂ → Br₂.</li>
+        <li>Iod: bijih iodate atau rumput laut; reduksi IO₃⁻ dengan SO₂ → I₂.</li>
+        <li>Astatine: jejak peluruhan; diproduksi nuklir.</li>
+      </ul>
+    </section>
+
+    <!-- 4) Pemanfaatan -->
+    <section id="pemanfaatan" aria-labelledby="pem-title">
+      <h2 id="pem-title">4) Pemanfaatan Unsur/Senyawa Halogen</h2>
+      <div class="grid cards-4">
+        <div class="card"><div style="font-size:1.6rem">💡</div><div style="font-weight:600;margin:.25rem 0">Lampu Halogen & Optik</div><div class="muted">Siklus halogen (I/Br) memperpanjang umur filamen.</div></div>
+        <div class="card"><div style="font-size:1.6rem">🧫</div><div style="font-weight:600;margin:.25rem 0">Disinfeksi & Pemutih</div><div class="muted">Cl₂/NaOCl/ClO₂ untuk sanitasi dan bleaching.</div></div>
+        <div class="card"><div style="font-size:1.6rem">🧪</div><div style="font-weight:600;margin:.25rem 0">Polimer & Material</div><div class="muted">PVC, PTFE, SF₆, UF₆.</div></div>
+        <div class="card"><div style="font-size:1.6rem">🩺</div><div style="font-weight:600;margin:.25rem 0">Kesehatan</div><div class="muted">Garam beryodium, kontras iodium, anestetik halogenasi.</div></div>
+      </div>
+    </section>
+
+    <!-- 5) Dampak Lingkungan -->
+    <section id="dampak" aria-labelledby="dam-title">
+      <h2 id="dam-title">5) Dampak Lingkungan</h2>
+      <div class="grid cards-3">
+        <div class="card"><div style="font-weight:600;margin-bottom:6px">Penipisan Ozon & Iklim</div><div class="muted">CFC/halon merusak ozon (Montreal). HFC/HFO pengganti: ODP rendah, sebagian masih GWP.</div></div>
+        <div class="card"><div style="font-weight:600;margin-bottom:6px">Toksisitas & Persistensi</div><div class="muted">Cl₂/HF berbahaya; dioxin/PCB/br flame retardants bisa persisten & bioakumulatif.</div></div>
+        <div class="card"><div style="font-weight:600;margin-bottom:6px">Limbah AOX</div><div class="muted">Bleaching berbasis klorin menghasilkan organik terhalogenasi yang sukar terurai.</div></div>
+      </div>
+      <div class="card" style="margin-top:10px"><b>Keselamatan:</b> Tangani gas Cl₂/Br₂, HF, & oksidator hipohalit dengan APD + ventilasi. Ikuti SDS & regulasi setempat.</div>
+    </section>
+
+    <!-- Sub-bab -->
+    <section id="subbab">
+      <h2>Sub-Bab Tambahan</h2>
+      <div class="grid cards-3">
+        <div class="card"><div style="font-weight:600;margin-bottom:6px">6) Senyawa Interhalogen</div><div class="muted">ClF₃ (bentuk T) & IF₇ (bipiramida pentagonal). <span class="mono">Cl₂ + F₂ → 2ClF</span>.</div></div>
+        <div class="card"><div style="font-weight:600;margin-bottom:6px">7) Oksianion Halogen</div><div class="muted">ClO⁻, ClO₂⁻, ClO₃⁻, ClO₄⁻. Aplikasi: NaClO/HOCl, ClO₂.</div></div>
+        <div class="card"><div style="font-weight:600;margin-bottom:6px">8) Uji Halida</div><div class="muted">AgCl (putih, larut NH₃), AgBr (kuning pucat), AgI (kuning, tidak larut).</div></div>
+      </div>
+    </section>
+
+    <!-- Kuis -->
+    <section id="kuis" aria-labelledby="quiz-title">
+      <h2 id="quiz-title">Kuis Cepat</h2>
+      <div class="card">
+        <p style="font-weight:600">1) Tren yang <i>meningkat</i> ke bawah golongan halogen adalah…</p>
+        <label><input type="radio" name="q1" value="A"> Energi ionisasi</label>
+        <label><input type="radio" name="q1" value="B"> Keelektronegatifan</label>
+        <label><input type="radio" name="q1" value="C"> Jari-jari atom</label>
+        <label><input type="radio" name="q1" value="D"> Afinitas elektron</label>
+      </div>
+      <div class="card" style="margin-top:10px">
+        <p style="font-weight:600">2) Endapan berwarna <i>kuning pekat</i> pada uji AgNO₃ menunjukkan adanya…</p>
+        <label><input type="radio" name="q2" value="A"> Cl⁻</label>
+        <label><input type="radio" name="q2" value="B"> I⁻</label>
+        <label><input type="radio" name="q2" value="C"> Br⁻</label>
+        <label><input type="radio" name="q2" value="D"> F⁻</label>
+      </div>
+      <div class="card" style="margin-top:10px">
+        <p style="font-weight:600">3) Contoh senyawa <i>interhalogen</i> dengan bentuk T adalah…</p>
+        <label><input type="radio" name="q3" value="A"> ClF₃</label>
+        <label><input type="radio" name="q3" value="B"> IF₇</label>
+        <label><input type="radio" name="q3" value="C"> NaCl</label>
+        <label><input type="radio" name="q3" value="D"> HClO</label>
+      </div>
+      <div style="margin-top:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <button class="btn btn-primary" onclick="nilaiKuis()">Nilai</button>
+        <span id="hasil-kuis" style="font-weight:600"></span>
+      </div>
+    </section>
+  </main>
+
+  <footer>Developed by Kelompok 3 • Kimia SMA: Golongan Halogen (VIIA)</footer>
+
+  <script>
+    // Populate cards
+    const data=[
+      { s:'F', n:'Fluorine', r:64, ie:1681, ea:328, en:3.98, st:'gas', c:'#0891b2' },
+      { s:'Cl', n:'Chlorine', r:99, ie:1251, ea:349, en:3.16, st:'gas', c:'#0ea5e9' },
+      { s:'Br', n:'Bromine', r:114, ie:1140, ea:324, en:2.96, st:'cair', c:'#f97316' },
+      { s:'I', n:'Iodine', r:133, ie:1008, ea:295, en:2.66, st:'padat', c:'#8b5cf6' },
+      { s:'At', n:'Astatine', r:150, ie:920, ea:270, en:2.2, st:'padat?', c:'#eab308' }
+    ];
+    const cont=document.getElementById('cards');
+    data.forEach(u=>{
+      const el=document.createElement('div');
+      el.className='card';
+      el.innerHTML = '<div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap">'+
+        '<div style="font-size:1.5rem;font-weight:900;color:'+u.c+'">'+u.s+'</div>'+
+        '<span class="muted" style="font-size:.78rem;background:#e2e8f0;border-radius:999px;padding:4px 10px">'+u.st+'</span></div>'+
+        '<div class="muted" style="margin-top:2px">'+u.n+'</div>'+
+        '<div style="display:grid;grid-template-columns:1fr auto;gap:6px 12px;margin-top:8px;font-size:.95rem">'+
+          '<div>Jari-jari (pm)</div><div><b>'+u.r+'</b></div>'+
+          '<div>Energi Ionisasi</div><div><b>'+u.ie+'</b></div>'+
+          '<div>Afinitas Elektron</div><div><b>'+u.ea+'</b></div>'+
+          '<div>Keelektroneg.</div><div><b>'+u.en+'</b></div>'+
+        '</div>';
+      cont.appendChild(el);
+    });
+  </script>
+</body>
+</html>
